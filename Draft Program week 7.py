@@ -28,4 +28,4 @@ if data['cod'] == 200:
     print(f"The humidity is {humidity}%")
     print(f"The speed of wind is {wind}m/s")
 else:
-    print("Error request")  # In the event of an error, this line of code prints #Error with request
+    print("Error request")  # In the event of an error, this line of code prints #Error request
