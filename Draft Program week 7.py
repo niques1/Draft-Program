@@ -5,7 +5,7 @@ api_key = "d2a323fb1f5fb7601a4ffe0b2707cafd" # Api key from the open weather web
 root_url = "http://api.openweathermap.org/data/2.5/weather?" # Url for the open map api
 city_name = input("Please Enter The City Name : ") # Enter the city needed for weatrher data
 zip_code = input("Please enter the zipcode: ") #Enter the zipcode for weather data
-url = f"{root_url}q={city_name},{zip_code}&appid={api_key}&units=metric" #final url for the API call
+url = f"{root_url}q={city_name},{zip_code}&appid={api_key}&units=imperial" #final url for the API call
 r = requests.get(url) # sending a get request at the url
 data = r.json() # storing the returned json data into a variable
 # Checking If there is no error and the status code is 200
@@ -23,8 +23,8 @@ if data['cod'] == 200:
     # Displaying all the data
     print(f"City Name : {city_name}")
     print(f"The Weather Condition is {descrip}")
-    print(f"The temperature is {temp}°C")
-    print(f"The pressure is {pressure} hPa")
+    print(f"The temperature is {temp}F")
+    print(f"The pressure is {pressure}hPa")
     print(f"The humidity is {humidity}%")
     print(f"The speed of wind is {wind}m/s")
 else:
